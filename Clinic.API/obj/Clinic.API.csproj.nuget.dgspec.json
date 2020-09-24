@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Disc\\Desktop\\Clinic\\Clinic.API\\Clinic.API.csproj": {}
+    "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Disc\\Desktop\\Clinic\\Clinic.API\\Clinic.API.csproj": {
+    "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Disc\\Desktop\\Clinic\\Clinic.API\\Clinic.API.csproj",
+        "projectUniqueName": "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj",
         "projectName": "Clinic.API",
-        "projectPath": "C:\\Users\\Disc\\Desktop\\Clinic\\Clinic.API\\Clinic.API.csproj",
+        "projectPath": "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj",
         "packagesPath": "C:\\Users\\Disc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Disc\\Desktop\\Clinic\\Clinic.API\\obj\\",
+        "outputPath": "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -150,7 +150,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

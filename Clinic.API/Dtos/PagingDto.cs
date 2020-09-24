@@ -1,4 +1,4 @@
-namespace API.DiscSyria.API.DataTransferObject
+namespace API.Clinic.API.DataTransferObject
 {
     public class PagingDto
     {
