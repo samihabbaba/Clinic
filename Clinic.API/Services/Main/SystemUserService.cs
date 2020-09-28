@@ -31,7 +31,7 @@ namespace Clinic.API.Services.Main
 
         public async Task<PagedList<SystemUser>> GetAllSystemUser(ResourceParameter parameter)
         {
-            var collection = _context.SystemUser.OrderBy(x => x.Id).AsQueryable();
+            var collection = _context.SystemUsers.OrderBy(x => x.Id).AsQueryable();
 
             if (parameter.Status != null)
                 collection = collection.Where(x => x.Status == parameter.Status);
@@ -47,7 +47,7 @@ namespace Clinic.API.Services.Main
         }
         public async Task<SystemUser> GetSystemUserById(string id)
         {
-            return await _context.SystemUser.FindAsync(id);
+            return await _context.SystemUsers.FindAsync(id);
         }
 
         public async Task<bool> AddSystemUser(SystemUser user,string password, string role)
@@ -62,12 +62,12 @@ namespace Clinic.API.Services.Main
         }
         public async Task<bool> EditSystemUser(SystemUser systemUser)
         {
-            _context.SystemUser.Update(systemUser);
+            _context.SystemUsers.Update(systemUser);
             return await Save();
         }
         public async Task<bool> DeleteSystemUser(SystemUser systemUser)
         {
-            _context.SystemUser.Remove(systemUser);
+            _context.SystemUsers.Remove(systemUser);
             return await Save();
         }
 

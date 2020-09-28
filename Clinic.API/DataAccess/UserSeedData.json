@@ -1,0 +1,34 @@
+{
+	"cols": [
+		"Username",
+		"Surname",
+		"DateOfBirth",
+		"Country",
+		"Description",
+		"Status",
+		"Name",
+		"PhoneNumber"
+	],
+	"data": [
+		[
+			"Janna",
+			"Cline",
+			"July 18th, 2018",
+			"Sint Maarten",
+			"tempus, lorem fringilla ornare placerat, orci lacus vestibulum lorem, sit",
+			"Suspendisse",
+			"Kellie",
+			"0845 46 43"
+        ],
+        [
+			"Kay",
+			"Villarreal",
+			"May 19th, 2021",
+			"Guam",
+			"ac turpis egestas. Aliquam fringilla cursus purus. Nullam",
+			"nunc.",
+			"Sandra",
+			"0800 1111"
+		]
+    ]
+}

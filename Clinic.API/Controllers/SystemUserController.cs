@@ -9,20 +9,22 @@ using Clinic.API.Dtos.UserUpdateDto;
 using Clinic.API.Models;
 using Clinic.API.Services.Main;
 using Clinic.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Options;
 
 namespace Clinic.API.Controllers
 {
-
+    [Authorize]
+    [ApiController]
     [Produces("application/json")]
-    public class SystemUserController:ControllerBase
+    public class SystemUserController : ControllerBase
     {
         private readonly ISystemUserService _context;
         private readonly LinkGenerator _link;
         private readonly IMapper _mapper;
-
         public SystemUserController(ISystemUserService context,
         LinkGenerator link, IMapper mapper)
         {
@@ -79,7 +81,7 @@ namespace Clinic.API.Controllers
                 return BadRequest();
             var systemUserEntity = _mapper.Map<SystemUser>(systemUser);
 
-            var result = await _context.AddSystemUser(systemUserEntity,"Disc123!","Patient");
+            var result = await _context.AddSystemUser(systemUserEntity,"password","Patient");
             return Ok(result);
         }
 

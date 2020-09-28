@@ -7869,6 +7869,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 3.1.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.8",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.8",
+      "Microsoft.Extensions.Configuration.Binder >= 3.1.8",
       "Microsoft.Extensions.Diagnostics.HealthChecks >= 3.1.8",
       "NLog.Extensions.Logging >= 1.6.5",
       "NLog.Web.AspNetCore >= 4.9.3",
@@ -7979,6 +7980,10 @@
             "version": "[3.1.8, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
+            "target": "Package",
+            "version": "[3.1.8, )"
+          },
+          "Microsoft.Extensions.Configuration.Binder": {
             "target": "Package",
             "version": "[3.1.8, )"
           },

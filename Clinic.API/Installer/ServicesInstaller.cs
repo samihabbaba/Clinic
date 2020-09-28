@@ -3,6 +3,7 @@ using API.Clinic.API.Contracts;
 using API.Clinic.API.LoggingService;
 using Clinic.API.Models;
 using Clinic.API.Services.Main;
+using Clinic.Services.Main;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -40,6 +41,7 @@ namespace Clinic.API.Installer
                 }));
 
             services.AddScoped<ISystemUserService, SystemUserService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<ILoggerManager, LoggerManager>();
             services.AddControllers();
         }

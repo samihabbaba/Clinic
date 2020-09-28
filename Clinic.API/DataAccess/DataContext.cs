@@ -10,7 +10,7 @@ namespace Clinic.API.DataAccess
         {
             
         }
-        public DbSet<SystemUser>  SystemUser { get; set; }
+        public DbSet<SystemUser>  SystemUsers { get; set; }
 
 
     }
