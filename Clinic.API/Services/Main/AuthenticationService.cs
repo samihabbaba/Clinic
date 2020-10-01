@@ -148,11 +148,11 @@ namespace Clinic.Services.Main
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim("id", user.Id),
-            //     new Claim("name", user.Name),
-            //     new Claim("currency", user.Currency),
-            //     new Claim("symbol", user.Symbol),
-            //     new Claim("master", user.IsMasterAccount.ToString()),
-            //     new Claim("role", userRoles.FirstOrDefault())
+                // new Claim("name", user.Name),
+                // new Claim("currency", user.Currency),
+                // new Claim("symbol", user.Symbol),
+                // new Claim("master", user.IsMasterAccount.ToString()),
+                // new Claim("role", userRoles.FirstOrDefault())
             };
 
 

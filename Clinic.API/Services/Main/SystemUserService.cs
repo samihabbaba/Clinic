@@ -54,9 +54,9 @@ namespace Clinic.API.Services.Main
         public async Task<bool> AddSystemUser(SystemUser user,string password, string role)
         {
             try{
-                user.Email = "Kasem@disc.com";
-                user.DateOfBirth = DateTime.Now;
-                user.PhoneNumber = "05338722255";
+                    // user.Email = "Kasem@disc.com";
+                    // user.DateOfBirth = DateTime.Now;
+                    // user.PhoneNumber = "05338722255";
                 // var user = await _context.SystemUser.AddAsync(SystemUser);
                 IdentityResult userToSave = await _userManager.CreateAsync(user,password);
                 if(userToSave.Succeeded)

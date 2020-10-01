@@ -18,10 +18,10 @@ namespace Clinic.API.Installer
                     {
                         Title = "Clinic API",
                         Version = "v1",
-                        Description = "Test API for Syria Disc.",
+                        Description = "Test API for Clinic.",
                         Contact = new OpenApiContact()
                         {
-                            Email = "No Email For Now",
+                            Email = "sami_habbaba30@hotmail.com",
                             Name = "Sami Habbaba",
                             Url = new Uri("https://opensource.org/licenses/MIT")
                         },

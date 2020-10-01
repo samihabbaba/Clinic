@@ -60,7 +60,7 @@ namespace Clinic.API.Controllers
             return Ok(SystemUserMap);
         }
 
-        [HttpGet("api/SystemUser/{id}")]
+        [HttpGet("SystemUser/{id}")]
         [ProducesResponseType(typeof(SystemUser),StatusCodes.Status200OK)]
 
         public async Task<IActionResult> GetSystemUserById(string id)
@@ -69,7 +69,7 @@ namespace Clinic.API.Controllers
             return Ok(model);
         }
 
-        [HttpPost("api/SystemUser")]
+        [HttpPost("SystemUser")]
         [ProducesResponseType(typeof(bool),StatusCodes.Status200OK)]
 
         public async Task<IActionResult> AddSystemUser([FromBody]SystemUserCreationDto systemUser)
