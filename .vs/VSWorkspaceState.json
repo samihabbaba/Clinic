@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Clinic.API",
+    "\\Clinic.API\\Controllers",
+    "\\Clinic.API\\Services",
+    "\\Clinic.API\\Services\\Main"
+  ],
+  "SelectedNode": "\\Clinic.API\\Controllers\\AuthenticationController.cs",
+  "PreviewInSolutionExplorer": false
+}

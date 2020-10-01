@@ -17,9 +17,8 @@ using Microsoft.Extensions.Options;
 
 namespace Clinic.API.Controllers
 {
-    [Authorize]
-    [ApiController]
     [Produces("application/json")]
+    [Route("api/suers")]
     public class SystemUserController : ControllerBase
     {
         private readonly ISystemUserService _context;
@@ -33,9 +32,7 @@ namespace Clinic.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("api/SystemUser")]
-        [ProducesResponseType(typeof(IEnumerable<SystemUser>),StatusCodes.Status200OK)]
-
+        [HttpGet("all")]
         public async Task<IActionResult> GetAllSystemUser(ResourceParameter parameter)
         {
             var model = await _context.GetAllSystemUser(parameter);
@@ -85,7 +82,7 @@ namespace Clinic.API.Controllers
             return Ok(result);
         }
 
-        [HttpPut("api/SystemUser/{id}")]
+        [HttpPut("{id}")]
         [ProducesResponseType(typeof(bool),StatusCodes.Status200OK)]
 
         public async Task<IActionResult> UpdateSystemUser(string id,[FromBody]UpdateDto systemUser)

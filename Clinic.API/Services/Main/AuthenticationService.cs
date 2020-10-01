@@ -69,7 +69,7 @@ namespace Clinic.Services.Main
 
             var result = await _userManager.CheckPasswordAsync(user, ar.Password);
 
-            // AuthenticationResult response = new AuthenticationResult();
+            //AuthenticationResult response = new AuthenticationResult();
 
             if (!result)
             {
@@ -144,15 +144,15 @@ namespace Clinic.Services.Main
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_jwtSettings.Secret);
             var userRoles = await _userManager.GetRolesAsync(user);
-            var claims = new List<Claim>  {
+            var claims = new List<Claim>{
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim("id", user.Id),
-                new Claim("name", user.Name),
-                // new Claim("currency", user.Currency),
-                // new Claim("symbol", user.Symbol),
-                // new Claim("master", user.IsMasterAccount.ToString()),
-                new Claim("role", userRoles.FirstOrDefault())
+            //     new Claim("name", user.Name),
+            //     new Claim("currency", user.Currency),
+            //     new Claim("symbol", user.Symbol),
+            //     new Claim("master", user.IsMasterAccount.ToString()),
+            //     new Claim("role", userRoles.FirstOrDefault())
             };
 
 
@@ -161,8 +161,8 @@ namespace Clinic.Services.Main
             {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.Now.Add(_jwtSettings.TokenLifetime),
-                SigningCredentials =
-                new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                // SigningCredentials =
+                // new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
@@ -175,6 +175,8 @@ namespace Clinic.Services.Main
             // };
             // await _context.RefreshToken.AddAsync(refreshToken);
             // await _context.SaveChangesAsync();
+
+
             return tokenHandler.WriteToken(token);
 
 

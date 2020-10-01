@@ -45,7 +45,6 @@
           "NLog.Web.AspNetCore": "4.9.3",
           "Swashbuckle.AspNetCore": "5.6.2",
           "System.IdentityModel.Tokens.Jwt": "6.7.1",
-          "System.Linq.Dynamic": "1.0.8",
           "System.Linq.Dynamic.Core": "1.2.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
@@ -1678,17 +1677,6 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0"
-        }
-      },
-      "System.Linq.Dynamic/1.0.8": {
-        "runtime": {
-          "lib/net40/System.Linq.Dynamic.dll": {
-            "assemblyVersion": "1.0.6132.35681",
-            "fileVersion": "1.0.6132.35681"
-          }
-        },
-        "compile": {
-          "lib/net40/System.Linq.Dynamic.dll": {}
         }
       },
       "System.Linq.Dynamic.Core/1.2.2": {
@@ -4510,13 +4498,6 @@
       "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
-    },
-    "System.Linq.Dynamic/1.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nh+3I/wcZcyQ4p8DKMhy/PH4sGKONrrGlx+eqpqrRTDHe6gyDTF5nK0AIXitDuzvtNTOkvpJWvPd0xdzEmlQjA==",
-      "path": "system.linq.dynamic/1.0.8",
-      "hashPath": "system.linq.dynamic.1.0.8.nupkg.sha512"
     },
     "System.Linq.Dynamic.Core/1.2.2": {
       "type": "package",

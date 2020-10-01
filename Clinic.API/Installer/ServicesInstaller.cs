@@ -21,7 +21,7 @@ namespace Clinic.API.Installer
                 .AddDefaultIdentity<SystemUser>(options => 
                 {
                     options.Password.RequireDigit = true;
-                    options.Password.RequiredLength = 8;
+                    options.Password.RequiredLength = 4;
                     options.Password.RequireNonAlphanumeric = true;
                     options.Password.RequiredUniqueChars = 1;
                     options.Password.RequireLowercase = true;

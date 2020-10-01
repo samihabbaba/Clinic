@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -52,12 +53,22 @@ namespace Clinic.API.Services.Main
 
         public async Task<bool> AddSystemUser(SystemUser user,string password, string role)
         {
-            // var user = await _context.SystemUser.AddAsync(SystemUser);
-            var userToSave = await _userManager.CreateAsync(user,password);
-            if(userToSave.Succeeded)
-            {
-                await _userManager.AddToRoleAsync(user,role);
+            try{
+                user.Email = "Kasem@disc.com";
+                user.DateOfBirth = DateTime.Now;
+                user.PhoneNumber = "05338722255";
+                // var user = await _context.SystemUser.AddAsync(SystemUser);
+                IdentityResult userToSave = await _userManager.CreateAsync(user,password);
+                if(userToSave.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user,role);
+                }
             }
+            catch(Exception ex)
+            {
+
+            }
+
             return await Save();
         }
         public async Task<bool> EditSystemUser(SystemUser systemUser)

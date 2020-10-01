@@ -127,10 +127,6 @@
               "target": "Package",
               "version": "[6.7.1, )"
             },
-            "System.Linq.Dynamic": {
-              "target": "Package",
-              "version": "[1.0.8, )"
-            },
             "System.Linq.Dynamic.Core": {
               "target": "Package",
               "version": "[1.2.2, )"

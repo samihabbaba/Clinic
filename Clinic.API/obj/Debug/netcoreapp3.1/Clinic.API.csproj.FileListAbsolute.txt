@@ -10,14 +10,12 @@ C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\Clinic.API.pdb
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.csprojAssemblyReference.cache
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.AssemblyInfoInputs.cache
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.AssemblyInfo.cs
-C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.csproj.CoreCompileInputs.cache
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.RazorTargetAssemblyInfo.cache
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\staticwebassets\Clinic.API.StaticWebAssets.Manifest.cache
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\staticwebassets\Clinic.API.StaticWebAssets.xml
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.dll
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.pdb
-C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.genruntimeconfig.cache
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\nlog.config
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\Clinic.API.StaticWebAssets.xml
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\Clinic.API.xml
@@ -84,7 +82,6 @@ C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\System.Configura
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.dll
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
@@ -110,4 +107,5 @@ C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\runtimes\win\lib
 C:\Users\Disc\Desktop\Clinic\clinic.api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Disc\Desktop\Clinic\clinic.api\obj\Debug\netcoreapp3.1\Clinic.API.csproj.CopyComplete
-C:\Users\Disc\Desktop\Clinic\Clinic.API\bin\Debug\netcoreapp3.1\DataAccess\UserSeedData.json
+C:\Users\Disc\Desktop\Clinic\Clinic.API\obj\Debug\netcoreapp3.1\Clinic.API.csproj.CoreCompileInputs.cache
+C:\Users\Disc\Desktop\Clinic\Clinic.API\obj\Debug\netcoreapp3.1\Clinic.API.genruntimeconfig.cache
