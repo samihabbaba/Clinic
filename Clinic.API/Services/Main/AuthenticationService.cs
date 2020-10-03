@@ -80,6 +80,9 @@ namespace Clinic.Services.Main
                 // };
             }
 
+
+           
+
             return await GenerateAuthenticationResultForUserAsync(user);
         }
         
@@ -152,7 +155,7 @@ namespace Clinic.Services.Main
                 // new Claim("currency", user.Currency),
                 // new Claim("symbol", user.Symbol),
                 // new Claim("master", user.IsMasterAccount.ToString()),
-                // new Claim("role", userRoles.FirstOrDefault())
+                new Claim("role", userRoles.FirstOrDefault())
             };
 
 
@@ -161,8 +164,8 @@ namespace Clinic.Services.Main
             {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.Now.Add(_jwtSettings.TokenLifetime),
-                // SigningCredentials =
-                // new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials =
+                new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);

@@ -20,6 +20,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Clinic.Helpers;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Clinic.API.Controllers
 {
@@ -52,12 +53,14 @@ namespace Clinic.API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
+            registerDto.Role = "Patient";
 
             var userToCreate = _mapper.Map<SystemUser>(registerDto);
             
             try
             {
                 await _systemUserService.AddSystemUser(userToCreate, registerDto.Password, registerDto.Role);
+                await _userManager.AddToRoleAsync(userToCreate, registerDto.Role);
                 return Ok();
             }
             catch (AppException ex)
@@ -71,6 +74,10 @@ namespace Clinic.API.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         public async Task<IActionResult> Authenticate([FromBody]LoginDto ar)
         {
+
+            // var role = await _userManager.GetRolesAsync(user);
+            // IdentityOptions _options = new IdentityOptions();
+
             var token = await _context.AuthenticateUser(ar);
             if (token == "error")
             {

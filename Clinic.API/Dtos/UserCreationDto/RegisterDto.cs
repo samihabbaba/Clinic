@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Clinic.API.Dtos.SystemUsersDto
 {
@@ -18,6 +19,8 @@ namespace Clinic.API.Dtos.SystemUsersDto
         
         // [Phone]
         // public int PhoneNumber { get; set; }
+
+        [JsonIgnore]
         public string Role { get; set; }
 
     }

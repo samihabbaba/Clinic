@@ -33,6 +33,7 @@ namespace Clinic.API.Controllers
         }
 
         [HttpGet("all")]
+        [Authorize(Roles = "Doctor, Admin")]
         public async Task<IActionResult> GetAllSystemUser(ResourceParameter parameter)
         {
             var model = await _context.GetAllSystemUser(parameter);
@@ -61,6 +62,7 @@ namespace Clinic.API.Controllers
         }
 
         [HttpGet("SystemUser/{id}")]
+        [Authorize(Roles = "Doctor, Admin")]
         [ProducesResponseType(typeof(SystemUser),StatusCodes.Status200OK)]
 
         public async Task<IActionResult> GetSystemUserById(string id)
@@ -70,6 +72,7 @@ namespace Clinic.API.Controllers
         }
 
         [HttpPost("SystemUser")]
+        [Authorize(Roles = "Doctor, Admin")]
         [ProducesResponseType(typeof(bool),StatusCodes.Status200OK)]
 
         public async Task<IActionResult> AddSystemUser([FromBody]SystemUserCreationDto systemUser)
@@ -83,6 +86,7 @@ namespace Clinic.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Doctor, Admin")]
         [ProducesResponseType(typeof(bool),StatusCodes.Status200OK)]
 
         public async Task<IActionResult> UpdateSystemUser(string id,[FromBody]UpdateDto systemUser)
@@ -96,11 +100,23 @@ namespace Clinic.API.Controllers
                 return NotFound();
 
             systemUserFromDb.Status = systemUser.Status;
+            systemUserFromDb.Description = systemUser.Description;
 
             var result = await _context.EditSystemUser(systemUserFromDb);
 
             return Ok(result);
         }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        [Route("ForAdmin")]
+
+        public string GetForAdmin()
+        {
+            return "Web method for Admin";
+        }
+
+    
 
         private string CreateSystemUserListResourceUri(ResourceParameter parameter, ResourceUriType type)
         {
