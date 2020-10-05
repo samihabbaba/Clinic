@@ -82,7 +82,6 @@ namespace Clinic.API.Services.Main
             return await Save();
         }
 
-
         private async Task<bool> Save()
         {
             return await _context.SaveChangesAsync() > 0;
