@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Clinic.API.Migrations
 {
-    public partial class LetsGo : Migration
+    public partial class bored : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,7 +46,9 @@ namespace Clinic.API.Migrations
                     DateOfBirth = table.Column<DateTime>(nullable: false),
                     Country = table.Column<string>(nullable: true),
                     Status = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true)
+                    Description = table.Column<string>(nullable: true),
+                    Address = table.Column<string>(nullable: true),
+                    AboutMe = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -4,6 +4,8 @@ namespace Clinic.API.Dtos.UserCreationDto
 {
     public class SystemUserCreationDto
     {
+        public string UserName { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Gender { get; set; }
@@ -11,5 +13,8 @@ namespace Clinic.API.Dtos.UserCreationDto
         public string Description { get; set; }
         public string Status { get; set; }
         public string Role { get; set; }
+        public string Password { get; set; } 
+        public string Email { get; set; }
+        public int PhoneNumber { get; set; }
     }
 }

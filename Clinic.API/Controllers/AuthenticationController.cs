@@ -53,14 +53,13 @@ namespace Clinic.API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
-            registerDto.Role = "Patient";
 
             var userToCreate = _mapper.Map<SystemUser>(registerDto);
             
             try
             {
                 await _systemUserService.AddSystemUser(userToCreate, registerDto.Password, registerDto.Role);
-                await _userManager.AddToRoleAsync(userToCreate, registerDto.Role);
+                await _userManager.AddToRoleAsync(userToCreate, Models.Roles.Patient.ToString());
                 return Ok();
             }
             catch (AppException ex)

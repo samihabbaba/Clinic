@@ -8,6 +8,7 @@ using Clinic.API.Dtos.UserListDto;
 using Clinic.API.Dtos.UserUpdateDto;
 using Clinic.API.Models;
 using Clinic.API.Services.Main;
+using Clinic.Extensions;
 using Clinic.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -75,21 +76,24 @@ namespace Clinic.API.Controllers
     }
 
     [HttpPost("SystemUser")]
-    [Authorize(Roles = "Doctor, Admin")]
+    [Authorize(Roles = "Admin, Doctor")]
     [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
-
     public async Task<IActionResult> AddSystemUser([FromBody] SystemUserCreationDto systemUser)
     {
-        if (systemUser == null)
+        var role = HttpContext.GetUserRole();
+
+        if((systemUser == null) || (role != "Admin" && systemUser.Role == "Admin"))
             return BadRequest();
+
+
         var systemUserEntity = _mapper.Map<SystemUser>(systemUser);
 
-        var result = await _context.AddSystemUser(systemUserEntity, "password", "Patient");
+        var result = await _context.AddSystemUser(systemUserEntity, systemUser.Password, systemUser.Role);
         return Ok(result);
     }
 
     [HttpPut("{id}")]
-    [Authorize(Roles = "Doctor, Admin")]
+    [Authorize(Roles = "Doctor")]
     [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
 
     public async Task<IActionResult> UpdateSystemUser(string id, [FromBody] UpdateDto systemUser)
@@ -111,8 +115,8 @@ namespace Clinic.API.Controllers
     }
 
 
-    [HttpPost]
-    [Authorize(Roles = "Patient")]
+    [HttpPut("editProfile")]
+    [Authorize(Roles = "Patient, Doctor")]
     [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
 
     public async Task<IActionResult> EditProfile(string id, [FromBody] EditProfileDto systemUser)
@@ -122,7 +126,7 @@ namespace Clinic.API.Controllers
         
 
         var systemUserFromDb = await _context.GetSystemUserById(id);
-        
+    
         if (systemUserFromDb == null)
             return NotFound();
 
@@ -137,17 +141,6 @@ namespace Clinic.API.Controllers
 
         return Ok(result);
     }
-
-
-    [HttpGet]
-    [Authorize(Roles = "Admin")]
-    [Route("ForAdmin")]
-
-    public string GetForAdmin()
-    {
-        return "Web method for Admin";
-    }
-
 
 
     private string CreateSystemUserListResourceUri(ResourceParameter parameter, ResourceUriType type)

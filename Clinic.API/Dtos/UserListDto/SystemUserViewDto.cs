@@ -13,6 +13,7 @@ namespace Clinic.API.Dtos.UserListDto
         public string Status { get; set; }
         public string Description { get; set; }
         public DateTime DateOfBirth { get; set; }
+        public int Phone { get; set; }
         public string Role { get; set; }
     }
 }
