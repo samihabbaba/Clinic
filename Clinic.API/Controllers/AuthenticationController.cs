@@ -58,8 +58,8 @@ namespace Clinic.API.Controllers
             
             try
             {
-                await _systemUserService.AddSystemUser(userToCreate, registerDto.Password, registerDto.Role);
-                await _userManager.AddToRoleAsync(userToCreate, Models.Roles.Patient.ToString());
+                await _systemUserService.AddSystemUser(userToCreate, registerDto.Password, registerDto.Role);   
+                await _userManager.AddToRoleAsync(userToCreate, Models.Roles.Patient.ToString());          
                 return Ok();
             }
             catch (AppException ex)

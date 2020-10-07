@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using API.Clinic.API.DataTransferObject;
 using AutoMapper;
@@ -26,9 +27,9 @@ namespace Clinic.API.Controllers
         private readonly ISystemUserService _context;
         private readonly LinkGenerator _link;
         private readonly IMapper _mapper;
-        private  readonly UserManager<SystemUser> _userManager;
+        private readonly UserManager<SystemUser> _userManager;
         public SystemUserController(ISystemUserService context,
-            LinkGenerator link, IMapper mapper, UserManager<SystemUser> userManager)
+        LinkGenerator link, IMapper mapper, UserManager<SystemUser> userManager)
         {
             _userManager = userManager;
             _context = context;
@@ -119,14 +120,17 @@ namespace Clinic.API.Controllers
     [Authorize(Roles = "Patient, Doctor")]
     [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
 
-    public async Task<IActionResult> EditProfile(string id, [FromBody] EditProfileDto systemUser)
+    public async Task<IActionResult> EditProfile(string id,[FromBody]EditProfileDto systemUser)
     {
+
         if (systemUser == null)
             return BadRequest();
-        
+
+        // var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
 
         var systemUserFromDb = await _context.GetSystemUserById(id);
-    
+
         if (systemUserFromDb == null)
             return NotFound();
 
@@ -134,10 +138,10 @@ namespace Clinic.API.Controllers
         systemUserFromDb.Country = systemUser.Country;
         systemUserFromDb.Description = systemUser.Description;
         systemUserFromDb.Address = systemUser.Address;
-        systemUserFromDb.AboutMe = systemUser.AboutMe;    
+        systemUserFromDb.AboutMe = systemUser.AboutMe;
 
-        var result = await _context.EditSystemUser(systemUserFromDb);  
-        
+        var result = await _context.EditSystemUser(systemUserFromDb);
+
 
         return Ok(result);
     }

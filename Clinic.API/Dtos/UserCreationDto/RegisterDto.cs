@@ -25,7 +25,6 @@ namespace Clinic.API.Dtos.SystemUsersDto
         public string Country { get; set; }
         
         public string Email { get; set; }
-        public int PhoneNumber { get; set; }
         
         public string AboutMe { get; set; }
         
