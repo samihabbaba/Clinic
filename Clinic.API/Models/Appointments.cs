@@ -11,7 +11,7 @@ namespace Clinic.API.Models
         public string DoctorId { get; set; }
         [ForeignKey("DoctorId")]
         public virtual SystemUser Doctor { get; set; }
-         [ForeignKey("PatientId")]
+        [ForeignKey("PatientId")]
         public virtual SystemUser Patient { get; set; }
 
     }

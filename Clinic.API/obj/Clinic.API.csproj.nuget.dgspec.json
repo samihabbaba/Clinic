@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj",
         "projectName": "Clinic.API",
-        "projectPath": "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj",
-        "packagesPath": "C:\\Users\\Disc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Disc\\Desktop\\Clinic\\clinic.api\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Clinic\\clinic.api\\Clinic.API.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Clinic\\clinic.api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Disc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -119,6 +112,10 @@
               "target": "Package",
               "version": "[4.9.3, )"
             },
+            "Swagger": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.2, )"
@@ -150,7 +147,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

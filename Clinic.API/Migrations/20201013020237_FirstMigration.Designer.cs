@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Clinic.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201007224237_newMig")]
-    partial class newMig
+    [Migration("20201013020237_FirstMigration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
